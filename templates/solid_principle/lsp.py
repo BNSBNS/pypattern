@@ -34,6 +34,8 @@ class Fan(HouseholdItem):
         print(f"{self.name} fan is off")
 
 
+
+
 def operate_item(item):
     item.turn_on()
     item.turn_off()
@@ -44,6 +46,10 @@ fan = Fan("Bedroom")
 
 operate_item(light)
 operate_item(fan)
+
+appliances = [light, fan]
+for appliance in appliances:
+    operate_item(appliance)
 
 # The operate_item function takes a HouseholdItem object as a parameter.
 # The Light and Fan classes inherit from the HouseholdItem class and implement the turn_on and turn_off methods.
